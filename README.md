@@ -4,11 +4,7 @@ This repository contains tools to create and interact with an Ubuntu VM in Azure
 
 ## Creating VM
 
-Create the resource group and vm by running the setup commands:
-```
-./setup-group.sh
-./setup-vm.sh
-```
+Create the VM by running `./setup-vm.sh`
 
 ## Getting VM IP
 
