@@ -16,3 +16,8 @@ az vm create \
   --generate-ssh-keys \
   --custom-data cloud-config.yml \
   > data/vm
+
+az network nsg rule create -g docker-vm-group --nsg-name DockerVMNSG -n DockerVMWeb --priority 100 \
+                            --source-address-prefixes '*' --source-port-ranges '*' \
+                            --destination-address-prefixes '*' --destination-port-ranges 80 --access Allow \
+                            --protocol Tcp --description "Allow port 80."
